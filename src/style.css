@@ -20,7 +20,7 @@ button:focus {
 
 .pane {
   overflow-y: auto;
-  /* padding: 10px; */
+  padding: 10px;
 }
 
 .sidebar {
@@ -29,7 +29,7 @@ button:focus {
 }
 
 .sidebar--note {
-  /* display: flex; */
+  display: flex;
 }
 
 .sidebar--header {

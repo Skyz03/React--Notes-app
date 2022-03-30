@@ -56,8 +56,18 @@ export default function App() {
 
   function deleteNote(event, noteId) {
     event.stopPropagation();
-    console.log(noteId);
-    // Your code here
+    setNotes((oldNotes) => {
+      const newArray2 = [];
+      for (let i = 0; i < oldNotes.length; i++) {
+        const oldNote = oldNotes[i];
+        if (oldNote.id === currentNoteId) {
+          newArray2.splice(i, 1);
+        } else {
+          newArray2.push(oldNote);
+        }
+      }
+      return newArray2;
+    });
   }
 
   function findCurrentNote() {
@@ -67,6 +77,8 @@ export default function App() {
       }) || notes[0]
     );
   }
+
+  //how to delete an array with the current node id
 
   return (
     <main>
